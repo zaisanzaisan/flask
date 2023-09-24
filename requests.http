@@ -1,0 +1,50 @@
+
+@baseUrl = http://localhost:5000
+
+GET {{baseUrl}}/user
+Content-Type: application/json
+
+
+###
+
+POST {{baseUrl}}/user
+Content-Type: application/json
+
+{
+    "name": "test_user1",
+    "sd": "zzz"
+}
+
+###
+
+POST {{baseUrl}}/adv
+Content-Type: application/json
+
+{
+    "title": "adv X51x",
+    "description": "adv description 2",
+    "owner_id": "1"
+}
+
+###
+GET {{baseUrl}}/adv
+Content-Type: application/json
+
+{
+    "owner_id": "1"
+}
+
+###
+GET {{baseUrl}}/adv
+Content-Type: application/json
+
+{ }
+
+###
+DELETE {{baseUrl}}/adv
+Content-Type: application/json
+
+{
+    "id": "51",
+    "owner_id": "1"
+}
